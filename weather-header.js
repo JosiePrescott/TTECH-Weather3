@@ -15,7 +15,7 @@ const iconMap = {
 
 };
 
-const iconPath = "./img/";
+const iconPath = "https://josieprescott.github.io/TTECH-Weather3/img/";
 
 //Current weather
 fetch(currentURL)
@@ -78,4 +78,5 @@ footer.innerHTML = `
     Last updated: ${currentDate}
   </p>
 `;
+
 

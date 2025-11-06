@@ -15,7 +15,7 @@ const iconMap = {
 
 };
 
-const iconPath = "/img/";
+const iconPath = "./img/";
 
 //Current weather
 fetch(currentURL)
@@ -78,3 +78,4 @@ footer.innerHTML = `
     Last updated: ${currentDate}
   </p>
 `;
+

@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="newsStyle.css" />
+    <link rel="stylesheet" href="style.css">
     <title>My Weather App</title>
   </head>
   <body>
@@ -20,13 +21,13 @@
     <section class="page">
       <h1 style="font-size: 25px">LATEST NEWS</h1>
       <hr>
-      <div class="article">
-        <img src="https://images.pexels.com/photos/416160/pexels-photo-416160.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&dpr=2" alt="main article" />
+      <div class="article" id="main-article">
+        <img id="myImage" alt="main article" />
         <h3><strong>No Article Title</strong></h3>
         <p>No Article Description.</p>
       </div>
       <hr>
-      <div class="archive">
+      <div class="archive" id="archive-articles">
         <div class="five-day">
           <img src="https://images.pexels.com/photos/416160/pexels-photo-416160.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&dpr=2" alt="main article" />
           <h3><strong>No Article Title</strong></h3>
@@ -50,6 +51,7 @@
       </div>
     </section>
   </body>
+  <script src="news-article.js"></script>
   <footer id="footer">
         <p>
             &copy; 2025 | Josie Prescott |

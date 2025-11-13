@@ -1,4 +1,5 @@
-const URL = `https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=dc8c7a2875e4420cb56237dad492e3b0`;
+const APIKey = `pub_c1ff8ce15c5a480a8212b9230d7e9d3e`;
+const URL = `https://newsdata.io/api/1/news?apikey=${APIKey}&country=us&category=business`;
 
 fetch(URL)
   .then(response => response.json())
@@ -34,4 +35,5 @@ fetch(URL)
     });
   })
   .catch(error => console.error("Error fetching articles:", error));
+
 

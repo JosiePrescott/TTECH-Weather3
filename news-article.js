@@ -1,5 +1,4 @@
-const APIKey = "dc8c7a2875e4420cb56237dad492e3b0";
-const URL = `https://newsapi.org/v2/everything?q=tesla&from=2025-10-11&sortBy=publishedAt&language=en&apiKey=${APIKey}`;
+const URL = `https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=dc8c7a2875e4420cb56237dad492e3b0`;
 
 fetch(URL)
   .then(response => response.json())
@@ -35,3 +34,4 @@ fetch(URL)
     });
   })
   .catch(error => console.error("Error fetching articles:", error));
+

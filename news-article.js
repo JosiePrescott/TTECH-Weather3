@@ -1,15 +1,15 @@
 const APIKey = "dc8c7a2875e4420cb56237dad492e3b0";
-const URL = `https://newsapi.org/v2/everything?q=tesla&from=2025-10-11&sortBy=publishedAt&language=en&apiKey=${APIKey}`;
+const URL = `https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=${APIKey}`;
 
 fetch(URL)
   .then(response => response.json())
   .then(data => {
-    const articles = data.articles.slice(0, 6); // 1 main + 5 archive
+    const articles = data.articles.slice(0, 6);  
 
     const main = articles[0];
     const rest = articles.slice(1);
 
-    // Update main article
+  
     const mainContainer = document.querySelector(".article");
     mainContainer.innerHTML = `
       <img src="${main.urlToImage || 'https://via.placeholder.com/350'}" class="article-img" />
@@ -18,9 +18,8 @@ fetch(URL)
       <a href="${main.url}" target="_blank">Read more</a>
     `;
 
-    // Update archive articles
     const archiveContainer = document.getElementById("archive-articles");
-    archiveContainer.innerHTML = ""; // Clear existing placeholders
+    archiveContainer.innerHTML = ""; 
 
     rest.forEach(article => {
       const div = document.createElement("div");
@@ -35,3 +34,4 @@ fetch(URL)
     });
   })
   .catch(error => console.error("Error fetching articles:", error));
+
